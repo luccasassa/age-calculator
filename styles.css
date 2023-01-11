@@ -1,0 +1,142 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: var(--poppins);
+  background-color: #222;
+  position: relative;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+*::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+
+*::selection {
+  color: grey;
+  background-color: #111;
+}
+
+span {
+  color: var(--pwhite);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  width: 50%;
+  height: auto;
+  margin: 30vh auto;
+  background: #333;
+  border-radius: 50px;
+  box-shadow: inset 20px 20px 60px #222,
+              inset -20px -20px 60px #444;
+}
+
+.title-container {
+  margin: 2rem 2rem 1rem 2rem;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+form {
+  /* border: 1px solid red; */
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.data {
+  /* border: 1px solid green; */
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  color: lightgray;
+  margin-right: auto;
+  font-size: .9rem;
+  font-weight: bold;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.complete {
+  background-color: #333;
+  color: #fff;
+  max-width: 190px;
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 5px;
+  transition: .5s;
+  outline: none;
+}
+
+.complete:focus:valid {
+  color: #fff;
+  background-color: #212121;
+  outline-color: green;
+  box-shadow: -3px -3px 15px green;
+  transition: .5s;
+  transition-property: box-shadow;
+}
+.complete:focus:invalid {
+  color: #fff;
+  background-color: #212121;
+  outline-color: red;
+  box-shadow: -3px -3px 15px red;
+  transition: .5s;
+  transition-property: box-shadow;
+}
+
+button {
+  color: #fff;
+  padding: 0.7em 1.7em;
+  font-size: 18px;
+  border-radius: 0.5em;
+  background: #333;
+  border: 1px solid #111;
+  transition: all .4s;
+  box-shadow: 6px 6px 12px #444,
+              -6px -6px 12px #222;
+}
+ 
+ button:active {
+  box-shadow: inset 4px 4px 12px #444,
+              inset -4px -4px 12px #222;
+}
+
+button:disabled {
+  background: grey;
+  box-shadow: none;
+  border: 1px solid brown;
+}
+
+button:disabled:active {
+  box-shadow: none;
+}
+
+#age {
+  margin: 0 2rem 2rem 2rem;
+  color: #fff;
+  text-align: justify;
+}
